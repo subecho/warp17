@@ -132,6 +132,8 @@ function get_os_image {
             export OS_IMAGE=centos7
         elif [[ "${OS_IMAGE}" =~ centos8\..* || "${OS_IMAGE}" =~ rhel8\..* ]]; then
             export OS_IMAGE=centos8
+        elif [[ "${OS_IMAGE}" =~ rocky9\..* ]]; then 
+            export OS_IMAGE=rocky9
         elif [[ "${OS_IMAGE}" =~ ubuntu.* ]]; then
             export OS_IMAGE=ubuntu
         else

@@ -139,6 +139,12 @@ function get_centos8_deps {
         kernel-devel-$(uname -r)
 }
 
+function get_rocky9_deps {
+    exec_cmd "Installing required dependencies" dnf install -y \
+        elfutils-libelf-devel \
+        numactl-devel make gcc \
+        kernel-devel
+
 # Install dpdk dependecies on Ubuntu.
 # ATTENTION: update at every new dpdk release supported [current state 19.11.3]
 function get_ubuntu_deps {
@@ -158,6 +164,9 @@ function get_deps {
             ;;
         "centos8")
             get_centos8_deps
+            ;;
+        "rocky9")
+            get_rocky9_deps
             ;;
         "ubuntu")
             get_ubuntu_deps

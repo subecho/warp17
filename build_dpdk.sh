@@ -144,6 +144,7 @@ function get_rocky9_deps {
         elfutils-libelf-devel \
         numactl-devel make gcc \
         kernel-devel
+}
 
 # Install dpdk dependecies on Ubuntu.
 # ATTENTION: update at every new dpdk release supported [current state 19.11.3]
